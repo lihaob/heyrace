@@ -7,6 +7,7 @@
         <module>euraka-server</module>
         <module>course_system</module>
         <module>gateway</module>
+        <module>server</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
