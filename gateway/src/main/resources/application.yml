@@ -4,12 +4,20 @@ spring:
 
   cloud:
     gateway:
+      globalcors:
+        globalcors:
+          cors-configurations:
+            '[/**]':
+              allowedOrigins: "localhost: 3000"
+              allowedMethods:
+                - GET
+                - POST
       discovery:
         locator:
           enabled: true
       routes:
-        - id: course_system
-          uri: http://localhost:9001
+        - id: course
+          uri: lb://course
           predicates:
             - Path=/course/**
 
