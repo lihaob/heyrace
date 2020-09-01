@@ -20,6 +20,10 @@ spring:
           uri: lb://course
           predicates:
             - Path=/course/**
+        - id: file
+          uri: lb://file
+          predicates:
+            - Path=/file/**
 
 server:
   port: 9000
